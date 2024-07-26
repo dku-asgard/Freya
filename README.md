@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Freya
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Freya Setup
 
-In the project directory, you can run:
+This guide will help you clone a repository, set up a React project, and get started with development on Windows, macOS, and Ubuntu.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before starting, make sure you have the following tools installed:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Git**: For cloning the repository.
+- **Node.js**: Includes npm for managing dependencies.
 
-### `npm test`
+### Installing Git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Windows**: Download and install Git from [git-scm.com](https://git-scm.com/download/win).
+- **macOS**: Install Git using Homebrew with `brew install git`, or download from [git-scm.com](https://git-scm.com/download/mac).
+- **Ubuntu**: Install Git using the terminal with:
 
-### `npm run build`
+  ```bash
+  sudo apt update
+  sudo apt install git
+  ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installing Node.js
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Windows**: Download and install Node.js from [nodejs.org](https://nodejs.org/en/download/).
+- **macOS**: Install Node.js using Homebrew with `brew install node`, or download from [nodejs.org](https://nodejs.org/en/download/).
+- **Ubuntu**: Install Node.js using the terminal with:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  ```bash
+  sudo apt update
+  sudo apt install nodejs npm
+  ```
+git
+## Cloning the Repository
 
-### `npm run eject`
+1. Open your terminal or command prompt.
+2. Clone the repository using Git:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   git clone https://github.com/dku-asgard/Freya.git
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3. Navigate to the cloned project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+   ```bash
+   cd freya
+   ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Setting Up the React Project
 
-## Learn More
+1. **Install Dependencies**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   Run the following command to install the project's dependencies:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+2. **Start the Development Server**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   To start the development server and view the React app in your browser, run:
 
-### Analyzing the Bundle Size
+   ```bash
+   npm start
+   ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   This will start the development server and open your default web browser to `http://localhost:3000`.
 
-### Making a Progressive Web App
+## Additional Commands
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+- **Install Additional Packages**: To add more libraries or packages, use:
 
-### Advanced Configuration
+  ```bash
+  npm install package-name
+  ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- **Build the Project for Production**: To create a production build, use:
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  ```bash
+  npm run build
+  ```
