@@ -26,9 +26,9 @@ const Navbar = () => {
   return (
     <Header>
       <CDBNavbar dark expand="md" scrolling>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100vw' }}>
           <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-            <h2 style={{ margin: 0 }}>{menuTitle}</h2>
+            <h2 style={{ margin: 0, fontWeight: 'bold' }}>{menuTitle}</h2>
           </div>
         </div>
       </CDBNavbar>
