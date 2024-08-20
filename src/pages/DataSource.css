@@ -1,46 +1,40 @@
-.badge-csv {
-  background-color: #cff5c0; 
-  color: rgb(21, 80, 30);
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.badge-json {
-  background-color: #bbb6e2; 
-  color: rgb(41, 30, 79);
+.dropdown-button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.badge-db {
-  background-color: #f6dcb5; 
-  color: rgb(247, 144, 75);
+.dropdown-content {
+  display: block;
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.badge-saved {
-  background-color: #cff5c0; 
-  color: rgb(21, 80, 30);
+.dropdown-item {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
 }
 
-.badge-undefined {
-  background-color: #f1bec3; 
-  color: rgb(255, 0, 0);
+.dropdown-item:last-child {
+  border-bottom: none;
 }
 
-.badge-unconnected {
-  background-color: #f1bec3; 
-  color: rgb(255, 0, 0);
+.dropdown-item:hover {
+  background-color: #f1f1f1;
 }
 
-.badge-connected {
-  background-color: #dffad4; 
-  color: rgb(21, 86, 30);
+.caret {
+  margin-left: 5px;
 }
-
-.search-container {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-}
-
-.search-input {
-  width: 450px; /* 원하는 가로 크기로 조절 */
-}
-
-
