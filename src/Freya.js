@@ -1,21 +1,23 @@
 import React, { Fragment } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Dashboard } from "./pages/Dashboard";
+import { DataVendorSelect } from "./pages/DataVendorSelect";
 import { DataConnections } from "./pages/DataConnections";
 import { DataSource } from "./pages/DataSource";
+import { DataSourceDetail } from "./pages/DataSourceDetail";
 import { ExploratoryDataAnalysis } from "./pages/ExploratoryDataAnalysis";
-import { AutoInsight } from "./pages/AutoInsight";
+import { DataMigration } from "./pages/DataMigration";
 const Freya = () => {
 
   return (
     <Fragment>
       <BrowserRouter>
         <Routes>
-          <Route exact path="/" element={<Dashboard />} />
-          <Route path="/dataconnections" element={<DataConnections />} />
-          <Route path="/datasource" element={<DataSource />} />
+          <Route exact path="/" element={<DataVendorSelect />} />
+          <Route path="/data-connections" element={<DataConnections />} />
+          <Route path="/data-source" element={<DataSource />} />
           <Route path="/exploratorydataanalysis" element={<ExploratoryDataAnalysis />} />
-          <Route path="/autoinsight" element={<AutoInsight />} />
+          <Route path="/data-source/detail" element={<DataSourceDetail />} />
+          <Route path="/data-migration" element={<DataMigration />} />
         </Routes>
       </BrowserRouter>
     </Fragment>

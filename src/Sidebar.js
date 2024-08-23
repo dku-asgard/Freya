@@ -14,7 +14,7 @@ const Sidebar = () => {
     <div
       style={{ display: "flex", height: "100%", overflow: "scroll initial" }}
     >
-      <CDBSidebar textColor="#fff" backgroundColor="#1e2838">
+      <CDBSidebar textColor="white" backgroundColor="#1e2838">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <a
             href="/"
@@ -31,27 +31,22 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
+            
             <NavLink exact to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="tachometer-alt">Dashboard</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/dataconnections" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="plug">Data Connections</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/datasource" activeClassName="activeClicked">
+            <NavLink exact to="/data-source" activeClassName="activeClicked">
               <CDBSidebarMenuItem icon="database">Data Source</CDBSidebarMenuItem>
             </NavLink>
-            <NavLink exact to="/exploratorydataanalysis" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-bar">Exploratory Data Analysis</CDBSidebarMenuItem>
-            </NavLink>
-            <NavLink exact to="/autoinsight" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="lightbulb">Auto Insight</CDBSidebarMenuItem>
+            <NavLink exact to="/data-migration" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="exchange-alt">Data Migration</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
         <CDBSidebarFooter className="sidebar-footer">
           <CDBSidebarContent>
-            <NavLink exact to="/settings" activeClassName="activeClicked" style={{ textDecoration: "none", color: "inherit" }}>
+            <NavLink exact to="/settings" activeClassName="activeClicked" style={{ textDecoration: "none", color: "white" }}>
               <CDBSidebarMenuItem icon="cog">Settings</CDBSidebarMenuItem>
             </NavLink>
             <a href="https://github.com/dku-asgard" 
@@ -60,9 +55,6 @@ const Sidebar = () => {
                style={{ textDecoration: "none", color: "inherit" }}>
                <CDBSidebarMenuItem icon="question-circle">Help</CDBSidebarMenuItem>
             </a>
-            <NavLink exact to="/logout" activeClassName="activeClicked" style={{ textDecoration: "none", color: "inherit" }}>
-              <CDBSidebarMenuItem icon="sign-out-alt">Log Out</CDBSidebarMenuItem>
-            </NavLink>
           </CDBSidebarContent>
         </CDBSidebarFooter>
       </CDBSidebar>
@@ -71,3 +63,18 @@ const Sidebar = () => {
 };
 
 export default Sidebar;
+
+/*
+<NavLink exact to="/" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="tachometer-alt">Dashboard</CDBSidebarMenuItem>
+            </NavLink>
+<NavLink exact to="/exploratorydataanalysis" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="chart-bar">Exploratory Data Analysis</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/autoinsight" activeClassName="activeClicked">
+              <CDBSidebarMenuItem icon="lightbulb">Auto Insight</CDBSidebarMenuItem>
+            </NavLink>
+            <NavLink exact to="/logout" activeClassName="activeClicked" style={{ textDecoration: "none", color: "white" }}>
+              <CDBSidebarMenuItem icon="sign-out-alt">Log Out</CDBSidebarMenuItem>
+            </NavLink>
+            */

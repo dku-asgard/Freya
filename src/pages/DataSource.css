@@ -1,29 +1,14 @@
-.badge-csv {
-  background-color: #cff5c0; 
-  color: rgb(21, 80, 30);
+.badge-mysql {
+  background-color: #f8d2a0; 
+  color: #00758f;
 }
 
-.badge-json {
-  background-color: #bbb6e2; 
-  color: rgb(41, 30, 79);
+.badge-postgresql {
+  background-color: #d6edff; 
+  color: #336791;
 }
 
-.badge-db {
-  background-color: #f6dcb5; 
-  color: rgb(247, 144, 75);
-}
-
-.badge-saved {
-  background-color: #cff5c0; 
-  color: rgb(21, 80, 30);
-}
-
-.badge-undefined {
-  background-color: #f1bec3; 
-  color: rgb(255, 0, 0);
-}
-
-.badge-unconnected {
+.badge-disconnected {
   background-color: #f1bec3; 
   color: rgb(255, 0, 0);
 }
@@ -36,7 +21,7 @@
 .search-container {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 20px;
+  margin: 25px; /* 테이블과 오른쪽 끝 맞춤 */
 }
 
 .search-input {

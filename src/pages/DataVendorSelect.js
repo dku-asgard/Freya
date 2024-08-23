@@ -1,22 +1,28 @@
 import React from 'react';
 import Sidebar from '../Sidebar';
 import Navbar from '../Navbar';
-import './DataConnections.css';
+import './DataVendorSelect.css';
+import '../components/Box.css';
+import { useNavigate } from 'react-router-dom';
 
-export const DataConnections = () => {
+export const DataVendorSelect = () => {
+  const navigate = useNavigate();
+
   const handleConnectionClick = (type) => {
-    console.log(`${type} button clicked`);
-    // Add functionality for button click here
+    // 선택한 벤더와 함께 DataConnections 페이지로 이동
+    navigate('/data-connections', { state: { vendorType: type } });
   };
 
   return (
     <div className="d-flex E">
-      <div className="sidebar"><Sidebar /></div>
-      <div className="main-content">
+      <div><Sidebar /></div>
+      <div style={{ flex: '1 1 auto', display: 'flex', flexFlow: 'column', height: '100vh', overflowY: 'hidden' }}>
         <Navbar />
         <div className="event-content">
           <div className="event-header">
-            <h3 className='main-header'>Vendor</h3>
+            <div className='connection-box-header'>
+            <h3 className='main-header'><strong>Vendor</strong></h3>
+            </div>
             <div className="connection-box" onClick={() => handleConnectionClick('MySQL')}>
               <img src="/images/mysql-logo.png" alt="MySQL" className="logo" />
               <div className="connection-text">MySQL</div>
@@ -31,3 +37,5 @@ export const DataConnections = () => {
     </div>
   );
 }
+
+export default DataVendorSelect;

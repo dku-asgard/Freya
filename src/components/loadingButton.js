@@ -19,22 +19,14 @@ function LoadingButton() {
 
   const handleClick = () => setLoading(true);
 
-  return (<><div className='form-buttons'>
+  return (<div className='form-buttons'>
     <Button
       variant="primary"
       disabled={isLoading}
       onClick={!isLoading ? handleClick : null}
     >
-      {isLoading ? 'Loading…' : 'Test Connection'}
+      {isLoading ? 'Loading…' : 'OK'}
     </Button></div>
-    <div className='form-buttons'>
-        <Button
-        variant="primary"
-        disabled={isLoading}
-        onClick={!isLoading ? handleClick : null}
-      >
-        {isLoading ? 'Loading…' : 'OK'}
-      </Button> </div></>
   );
 }
 

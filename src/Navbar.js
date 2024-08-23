@@ -6,16 +6,17 @@ import { CDBNavbar } from "cdbreact";
 // 메뉴 제목 결정 함수
 const getMenuTitle = (pathname) => {
   switch (pathname) {
-    case '/dataconnections':
+    case '/data-connections':
       return 'Data Connections';
-    case '/datasource':
+    case '/data-source':
+    case '/data-source/detail':
       return 'Data Source';
-    case '/exploratorydataanalysis':
-      return 'Exploratory Data Analysis';
+    case '/data-migration':
+      return 'Data Migration';
     case '/autoinsight':
       return 'Auto Insight';
     default:
-      return 'Dashboard'; // 기본 메뉴 제목
+      return 'Data Connections'; // 기본 메뉴 제목
   }
 };
 
@@ -28,7 +29,7 @@ const Navbar = () => {
       <CDBNavbar dark expand="md" scrolling>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%' }}>
           <div style={{ display: 'flex', alignItems: 'center', flex: 1 }}>
-            <h2 style={{ margin: 0 }}>{menuTitle}</h2>
+            <h2 style={{ margin: 0, fontWeight: 'bold' }}>{menuTitle}</h2>
           </div>
         </div>
       </CDBNavbar>

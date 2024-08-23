@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+/* Optional: Custom styles */
+.card-title {
+  font-size: 1.25rem; 
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+
+.table-view td, .table-view th {
+  font-size: 0.7rem; 
+}
+
+
+.card-body-gray { 
+  background-color: #f8f9fa; 
+  padding: 20
+}
+
+/* 테이블 헤더 (ID, APP, NAME, APPLIED 행) 진한 회색 배경 */
+.table-view thead tr {
+  background-color: #6c757d ; 
+  color: rgb(0, 0, 0) ; 
+}
+
+.material-symbols--table-sharp {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M3 21V3h18v18zM5 9h14V5H5zm5.325 5h3.35v-3h-3.35zm0 5h3.35v-3h-3.35zM5 14h3.325v-3H5zm10.675 0H19v-3h-3.325zM5 19h3.325v-3H5zm10.675 0H19v-3h-3.325z'/%3E%3C/svg%3E");
+  background-color: currentColor;
+  -webkit-mask-image: var(--svg);
+  mask-image: var(--svg);
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
