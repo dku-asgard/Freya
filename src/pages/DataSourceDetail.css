@@ -1,10 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
 /* Optional: Custom styles */
 .card-title {
   font-size: 1.25rem; 
   font-weight: 600;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  box-shadow: none; /* Optional: Remove shadow if present */
+  border-radius: 4px;
 }
 
 .vh-100 {

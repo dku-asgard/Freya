@@ -10,7 +10,7 @@
   .event-content {
     /*overflow-y: auto;*/
     padding: 20px;
-    background-color: #f6f6f6;
+    background-color: #eaeaea; /*#f6f6f6*/
     height: 100%;
   }
 
@@ -25,4 +25,8 @@
     /*max-width: 1000px;  /*Optional: control the max width */
     margin-bottom: 20px;
     box-shadow: 0;
+  }
+
+  :root {
+    --border-radius: 8px;
   }

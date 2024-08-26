@@ -1,23 +1,36 @@
-import React from 'react';
-import Sidebar from '../Sidebar';
-import Navbar from '../Navbar';
-import { useLocation } from 'react-router-dom';
-import './DataSourceDetail.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-free/css/all.min.css';
+import React from "react";
+import Sidebar from "../Sidebar";
+import Navbar from "../Navbar";
+import { useLocation } from "react-router-dom";
+import "./DataSourceDetail.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "../components/Box.css";
 
 export const DataSourceDetail = () => {
   const location = useLocation();
   const { selectedItem } = location.state || {};
   return (
     <div className="d-flex E">
-      <div><Sidebar /></div>
-      <div style={{ flex: '1 1 auto', display: 'flex', flexFlow: 'column', height: '100vh', overflowY: 'hidden' }}>
+      <div>
+        <Sidebar />
+      </div>
+      <div
+        style={{
+          flex: "1 1 auto",
+          display: "flex",
+          flexFlow: "column",
+          height: "100vh",
+          overflowY: "hidden",
+        }}
+      >
         <Navbar />
-        <div className="container-fluid p-4 overflow-auto">
+        <div className="event-content p-4 overflow-auto">
           <div className="card mb-4 bg-light">
             <div className="card-body">
-              <h5 className="card-title"><strong>Storage Detail - {selectedItem.name}</strong></h5>
+              <h5 className="card-title">
+                <strong>Storage Detail - {selectedItem.name}</strong>
+              </h5>
               <p className="card-text">Vendor: {selectedItem.vendor}</p>
               <p className="card-text">Status: {selectedItem.status}</p>
             </div>
@@ -25,12 +38,15 @@ export const DataSourceDetail = () => {
           <div className="row">
             <div className="col-md-3">
               <div className="card">
-                <div className="card-header"><strong>Schemas</strong></div>
+                <div className="card-header">
+                  <strong>Schemas</strong>
+                </div>
                 <ul className="list-group list-group-flush">
-                  <li className="list-group-item bg-light"> 
-                    <i className="fas fa-database text-secondary"></i> information_schema
+                  <li className="list-group-item bg-light">
+                    <i className="fas fa-database text-secondary"></i>{" "}
+                    information_schema
                   </li>
-                  <li className="list-group-item bg-light"> 
+                  <li className="list-group-item bg-light">
                     <i className="fas fa-database text-secondary"></i> public
                   </li>
                 </ul>
@@ -38,7 +54,9 @@ export const DataSourceDetail = () => {
             </div>
             <div className="col-md-3">
               <div className="card">
-                <div className="card-header"><strong>Tables</strong></div>
+                <div className="card-header">
+                  <strong>Tables</strong>
+                </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item bg-light">
                     <i className="fas fa-table"></i> django_migrations

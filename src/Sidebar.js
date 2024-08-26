@@ -46,9 +46,7 @@ const Sidebar = () => {
 
         <CDBSidebarFooter className="sidebar-footer">
           <CDBSidebarContent>
-            <NavLink exact to="/settings" activeClassName="activeClicked" style={{ textDecoration: "none", color: "white" }}>
-              <CDBSidebarMenuItem icon="cog">Settings</CDBSidebarMenuItem>
-            </NavLink>
+            
             <a href="https://github.com/dku-asgard" 
                target="_blank" 
                rel="noopener noreferrer" 
@@ -76,5 +74,10 @@ export default Sidebar;
             </NavLink>
             <NavLink exact to="/logout" activeClassName="activeClicked" style={{ textDecoration: "none", color: "white" }}>
               <CDBSidebarMenuItem icon="sign-out-alt">Log Out</CDBSidebarMenuItem>
+            </NavLink>
+
+
+            <NavLink exact to="/settings" activeClassName="activeClicked" style={{ textDecoration: "none", color: "white" }}>
+              <CDBSidebarMenuItem icon="cog">Settings</CDBSidebarMenuItem>
             </NavLink>
             */

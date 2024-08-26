@@ -21,11 +21,10 @@
 .search-container {
   display: flex;
   justify-content: flex-end;
-  margin: 25px; /* 테이블과 오른쪽 끝 맞춤 */
+  margin-bottom: 25px; /* 테이블과의 간격 */
 }
 
 .search-input {
   width: 450px; /* 원하는 가로 크기로 조절 */
 }
-
 
