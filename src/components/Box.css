@@ -1,12 +1,3 @@
-.the-container {
-    border-radius: 4px; /* 모서리 둥글게 */
-    padding: 20px; /* 내부 여백 */
-    margin: 20px auto; /* 중앙 정렬 및 외부 여백 */
-    max-width: 100%; /* 최대 가로 크기 */
-    height: 100%;
-    background-color: #ffffff; /* 배경색 추가 */
-  }
-
   .event-content {
     /*overflow-y: auto;*/
     padding: 20px;
@@ -14,7 +5,7 @@
     height: 100%;
   }
 
-  .connection-box-header {
+  .content-box {
     display: flex;
     align-self: flex-start;
     align-items: center; /* 수직 중앙 정렬 */
@@ -27,6 +18,18 @@
     box-shadow: 0;
   }
 
+  .content-box-vertical {
+    display: vertical;
+    align-self: flex-start;
+    align-items: center; /* 수직 중앙 정렬 */
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    width: 100%; /*calc(100%-50px); /* Make sure it takes full width available */
+    /*max-width: 1000px;  /*Optional: control the max width */
+    margin-bottom: 20px;
+    box-shadow: 0;
+  }
   :root {
     --border-radius: 8px;
   }

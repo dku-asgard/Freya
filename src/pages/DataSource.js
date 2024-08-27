@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Sidebar from "../Sidebar";
-import Navbar from "../Navbar";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import { Table, Button, Pagination, FormControl } from "react-bootstrap";
 import { FaEdit, FaTrash } from "react-icons/fa";
 import "./DataSource.css";
@@ -192,8 +192,7 @@ export const DataSource = () => {
       >
         <Navbar />
         <div className="event-content">
-          <div className="container mt-4">
-            <div className="the-container">
+            <div className="content-box-vertical">
               <div className="search-container d-flex justify-content-end">
                 <FormControl
                   type="search"
@@ -274,6 +273,5 @@ export const DataSource = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };

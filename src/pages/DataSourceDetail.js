@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "../Sidebar";
-import Navbar from "../Navbar";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import { useLocation } from "react-router-dom";
 import "./DataSourceDetail.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,7 +25,7 @@ export const DataSourceDetail = () => {
         }}
       >
         <Navbar />
-        <div className="event-content p-4 overflow-auto">
+        <div className="event-content">
           <div className="card mb-4 bg-light">
             <div className="card-body">
               <h5 className="card-title">

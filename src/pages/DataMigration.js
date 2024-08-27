@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Sidebar from "../Sidebar";
-import Navbar from "../Navbar";
+import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import Dropdown from "../components/Dropdown";
 import ProgressBar from "../components/ProgressBar.js";
 import "./DataMigration.css";

@@ -4,7 +4,6 @@ import { DataVendorSelect } from "./pages/DataVendorSelect";
 import { DataConnections } from "./pages/DataConnections";
 import { DataSource } from "./pages/DataSource";
 import { DataSourceDetail } from "./pages/DataSourceDetail";
-import { ExploratoryDataAnalysis } from "./pages/ExploratoryDataAnalysis";
 import { DataMigration } from "./pages/DataMigration";
 const Freya = () => {
 
@@ -15,7 +14,6 @@ const Freya = () => {
           <Route exact path="/" element={<DataVendorSelect />} />
           <Route path="/data-connections" element={<DataConnections />} />
           <Route path="/data-source" element={<DataSource />} />
-          <Route path="/exploratorydataanalysis" element={<ExploratoryDataAnalysis />} />
           <Route path="/data-source/detail" element={<DataSourceDetail />} />
           <Route path="/data-migration" element={<DataMigration />} />
         </Routes>
