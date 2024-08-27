@@ -43,10 +43,6 @@ export const DataSourceDetail = () => {
                 </div>
                 <ul className="list-group list-group-flush">
                   <li className="list-group-item bg-light">
-                    <i className="fas fa-database text-secondary"></i>{" "}
-                    information_schema
-                  </li>
-                  <li className="list-group-item bg-light">
                     <i className="fas fa-database text-secondary"></i> public
                   </li>
                 </ul>

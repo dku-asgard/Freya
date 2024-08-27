@@ -13,96 +13,96 @@ const data = [
     vendor: "PostgreSQL",
     size: "14 GB",
     status: "Connected",
-    date: "2023.08.01",
-    user: "Apdul",
-  },
-  {
-    name: "gangnam_traffic",
-    vendor: "PostgreSQL",
-    size: "231 KB",
-    status: "Disconnected",
-    date: "2023.09.14",
-    user: "hoxykim",
-  },
-  {
-    name: "foo_value",
-    vendor: "PostgreSQL",
-    size: "32 MB",
-    status: "Connected",
-    date: "2023.09.30",
-    user: "Apdul",
-  },
-  {
-    name: "simple_data",
-    vendor: "MySQL",
-    size: "783 KB",
-    status: "Connected",
-    date: "2023.10.11",
-    user: "Apdul",
-  },
-  {
-    name: "log_data",
-    vendor: "MySQL",
-    size: "27 GB",
-    status: "Disconnected",
-    date: "2023.11.03",
-    user: "sk",
-  },
-  {
-    name: "connection_log",
-    vendor: "PostgreSQL",
-    size: "518 MB",
-    status: "Disconnected",
-    date: "2023.11.24",
-    user: "sk",
-  },
-  {
-    name: "random_data",
-    vendor: "MySQL",
-    size: "1.2 GB",
-    status: "Connected",
-    date: "2023.12.26",
+    date: "2024.08.27",
     user: "gn",
   },
   {
-    name: "remote_data",
+    name: "gangnam_traffic",
+    vendor: "MySQL",
+    size: "231 KB",
+    status: "Connected",
+    date: "2024.08.27",
+    user: "sk",
+  },
+  {
+    name: "alphacon",
+    vendor: "PostgreSQL",
+    size: "32 MB",
+    status: "Connected",
+    date: "2024.08.25",
+    user: "gn",
+  },
+  {
+    name: "kanary",
+    vendor: "MySQL",
+    size: "783 KB",
+    status: "Connected",
+    date: "2024.08.11",
+    user: "sk",
+  },
+  {
+    name: "kubert",
+    vendor: "MySQL",
+    size: "27 GB",
+    status: "Disconnected",
+    date: "2024.08.10",
+    user: "sk",
+  },
+  {
+    name: "freya",
+    vendor: "PostgreSQL",
+    size: "518 MB",
+    status: "Disconnected",
+    date: "2024.07.29",
+    user: "sk",
+  },
+  {
+    name: "asgard",
+    vendor: "MySQL",
+    size: "1.2 GB",
+    status: "Connected",
+    date: "2024.07.28",
+    user: "gn",
+  },
+  {
+    name: "raon_data",
     vendor: "MySQL",
     size: "240 GB",
     status: "Connected",
-    date: "2024.01.15",
-    user: "hoxykim",
+    date: "2024.07.28",
+    user: "nh",
   },
   {
-    name: "foo_log",
+    name: "woden",
     vendor: "MySQL",
     size: "37 MB",
     status: "Connected",
-    date: "2024.01.18",
-    user: "Apdul",
+    date: "2024.07.28",
+    user: "yn",
   },
   {
-    name: "simple_string",
+    name: "marmot",
     vendor: "PostgreSQL",
     size: "67 GB",
     status: "Disconnected",
-    date: "2024.02.29",
-    user: "Apdul",
+    date: "2024.07.28",
+    user: "hk",
   },
   {
-    name: "price_data",
+    name: "groot",
     vendor: "MySQL",
     size: "597 MB",
     status: "Connected",
-    date: "2024.03.01",
-    user: "Apdul",
+    date: "2024.07.27",
+    user: "sk",
   },
   {
-    name: "random_data",
+    name: "bifrost",
     vendor: "MySQL",
     size: "652 MB",
     status: "Disconnected",
-    date: "2024.03.29",
-    user: "hoxykim",
+    date: "2024.07.20",
+    user: "gn",
   },
 ];
 
@@ -192,86 +192,82 @@ export const DataSource = () => {
       >
         <Navbar />
         <div className="event-content">
-            <div className="content-box-vertical">
-              <div className="search-container d-flex justify-content-end">
-                <FormControl
-                  type="search"
-                  placeholder="Search"
-                  className="search-input"
-                  value={searchTerm}
-                  onChange={handleSearchChange} // 변경된 핸들러로 검색 기능 개선
-                />
-              </div>
-              <div
-                className="event-header"
-                style={{ display: "flex", alignItems: "center" }}
-              >
-                <Table striped bordered hover>
-                  <thead>
-                    <tr>
-                      <th>Name</th>
-                      <th>Vendor</th>
-                      <th>Size</th>
-                      <th>Status</th>
-                      <th>Date Uploaded</th>
-                      <th>Uploaded By</th>
-                      <th>Actions</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {currentData.map((item, index) => (
-                      <tr
-                        key={index}
-                        onClick={() => handleRowClick(item)}
-                        style={{ cursor: "pointer" }}
-                      >
-                        <td>{item.name}</td>
-                        <td>
-                          <span className={`badge ${typeColors[item.vendor]}`}>
-                            {item.vendor}
-                          </span>
-                        </td>
-                        <td>{item.size}</td>
-                        <td>
-                          <span
-                            className={`badge ${statusColors[item.status]}`}
-                          >
-                            {item.status}
-                          </span>
-                        </td>
-                        <td>{item.date}</td>
-                        <td>{item.user}</td>
-                        <td onClick={(e) => e.stopPropagation()}>
-                          <Button variant="outline-secondary" size="sm">
-                            <FaEdit />
-                          </Button>{" "}
-                          <Button variant="outline-danger" size="sm">
-                            <FaTrash />
-                          </Button>
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </Table>
-              </div>
-              <Pagination className="justify-content-center mt-4">
-                <Pagination.Prev
-                  disabled={currentPage === 1}
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.max(prev - 1, 1))
-                  }
-                />
-                {renderPaginationItems()}
-                <Pagination.Next
-                  disabled={currentPage === totalPages}
-                  onClick={() =>
-                    setCurrentPage((prev) => Math.min(prev + 1, totalPages))
-                  }
-                />
-              </Pagination>
+          <div className="content-box-vertical">
+            <div className="search-container d-flex justify-content-end">
+              <FormControl
+                type="search"
+                placeholder="Search"
+                className="search-input"
+                value={searchTerm}
+                onChange={handleSearchChange} // 변경된 핸들러로 검색 기능 개선
+              />
             </div>
+            <div
+              className="event-header"
+              style={{ display: "flex", alignItems: "center" }}
+            >
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Vendor</th>
+                    <th>Size</th>
+                    <th>Status</th>
+                    <th>Date Uploaded</th>
+                    <th>Uploaded By</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {currentData.map((item, index) => (
+                    <tr
+                      key={index}
+                      onClick={() => handleRowClick(item)}
+                      style={{ cursor: "pointer" }}
+                    >
+                      <td>{item.name}</td>
+                      <td>
+                        <span className={`badge ${typeColors[item.vendor]}`}>
+                          {item.vendor}
+                        </span>
+                      </td>
+                      <td>{item.size}</td>
+                      <td>
+                        <span className={`badge ${statusColors[item.status]}`}>
+                          {item.status}
+                        </span>
+                      </td>
+                      <td>{item.date}</td>
+                      <td>{item.user}</td>
+                      <td onClick={(e) => e.stopPropagation()}>
+                        <Button variant="outline-secondary" size="sm">
+                          <FaEdit />
+                        </Button>{" "}
+                        <Button variant="outline-danger" size="sm">
+                          <FaTrash />
+                        </Button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </Table>
+            </div>
+            <Pagination className="justify-content-center mt-4">
+              <Pagination.Prev
+                disabled={currentPage === 1}
+                onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
+              />
+              {renderPaginationItems()}
+              <Pagination.Next
+                disabled={currentPage === totalPages}
+                onClick={() =>
+                  setCurrentPage((prev) => Math.min(prev + 1, totalPages))
+                }
+              />
+            </Pagination>
           </div>
         </div>
       </div>
+    </div>
   );
 };

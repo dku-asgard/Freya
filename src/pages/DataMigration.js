@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
 import Dropdown from "../components/Dropdown";
@@ -6,8 +7,24 @@ import ProgressBar from "../components/ProgressBar.js";
 import "./DataMigration.css";
 import { FaArrowRight } from "react-icons/fa";
 
+const data = [
+  { name: "gangseo_traffic", vendor: "PostgreSQL" },
+  { name: "gangnam_traffic", vendor: "MySQL" },
+  { name: "alphacon", vendor: "PostgreSQL" },
+  { name: "kanary", vendor: "MySQL" },
+  { name: "kubert", vendor: "MySQL" },
+  { name: "freya", vendor: "PostgreSQL" },
+  { name: "asgard", vendor: "MySQL" },
+  { name: "raon_data", vendor: "MySQL" },
+  { name: "woden", vendor: "MySQL" },
+  { name: "marmot", vendor: "PostgreSQL" },
+  { name: "groot", vendor: "MySQL" },
+  { name: "bifrost", vendor: "MySQL" },
+];
+
 export const DataMigration = () => {
-  const dbOptions = ["Select", "information_schema", "public"];
+  // Extract DB names from the 'data' array and prepend "Select"
+  const dbOptions = ["Select", ...data.map((item) => item.name)];
   const [sourceDB, setSourceDB] = useState("Select");
   const [targetDB, setTargetDB] = useState("Select");
   const [execute, setExecute] = useState(false);
@@ -49,10 +66,10 @@ export const DataMigration = () => {
     setExecute(false);
   }
 
-  const sourceImgSrc =
-    sourceDB === "Select" ? "/images/default-db.png" : "/images/elephant.png";
-  const targetImgSrc =
-    targetDB === "Select" ? "/images/default-db.png" : "/images/mysql-logo.png";
+  const sourceItem = data.find(item => item.name === sourceDB);
+  const targetItem = data.find(item => item.name === targetDB);
+  const sourceImgSrc = sourceItem?.vendor === "PostgreSQL" ? "/images/elephant.png" : "/images/mysql-logo.png";
+  const targetImgSrc = targetItem?.vendor === "MySQL" ? "/images/mysql-logo.png" : "/images/elephant.png";
 
   return (
     <div className="d-flex E">
@@ -97,13 +114,13 @@ export const DataMigration = () => {
                 <div className="db">
                   <img
                     className="imgs"
-                    src={sourceImgSrc}
+                    src={sourceDB === "Select" ? "/images/default-db.png" : sourceImgSrc}
                     alt="Source Database Logo"
                   />
                   <p>
-                    DB Name
+                    {sourceDB === "Select" ? "Source" : sourceDB}
                     <br />
-                    {sourceDB === "Select" ? "Source Database" : "PostgreSQL"}
+                    {sourceDB === "Select" ? "Database" : sourceItem?.vendor }
                   </p>
                 </div>
                 <span className="arrow">
@@ -112,13 +129,13 @@ export const DataMigration = () => {
                 <div className="db">
                   <img
                     className="imgs"
-                    src={targetImgSrc}
+                    src={targetDB === "Select" ? "/images/default-db.png" : targetImgSrc}
                     alt="Target Database Logo"
                   />
                   <p>
-                    DB Name
+                    {targetDB === "Select" ? "Target" : targetDB}
                     <br />
-                    {targetDB === "Select" ? "Target Database" : "MySQL"}
+                    {targetDB === "Select" ? "Database" : targetItem?.vendor}
                   </p>
                 </div>
               </div>
