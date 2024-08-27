@@ -5,7 +5,7 @@ import {
   CDBSidebarFooter,
   CDBSidebarHeader,
   CDBSidebarMenu,
-  CDBSidebarMenuItem
+  CDBSidebarMenuItem,
 } from "cdbreact";
 import { NavLink } from "react-router-dom";
 
@@ -31,27 +31,35 @@ const Sidebar = () => {
 
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
-            
             <NavLink exact to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="plug">Data Connections</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="plug">
+                Data Connections
+              </CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/data-source" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="database">Data Source</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="database">
+                Data Source
+              </CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/data-migration" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="exchange-alt">Data Migration</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="exchange-alt">
+                Data Migration
+              </CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent>
 
         <CDBSidebarFooter className="sidebar-footer">
           <CDBSidebarContent>
-            
-            <a href="https://github.com/dku-asgard" 
-               target="_blank" 
-               rel="noopener noreferrer" 
-               style={{ textDecoration: "none", color: "inherit" }}>
-               <CDBSidebarMenuItem icon="question-circle">Help</CDBSidebarMenuItem>
+            <a
+              href="https://github.com/dku-asgard"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", color: "inherit" }}
+            >
+              <CDBSidebarMenuItem icon="question-circle">
+                Help
+              </CDBSidebarMenuItem>
             </a>
           </CDBSidebarContent>
         </CDBSidebarFooter>

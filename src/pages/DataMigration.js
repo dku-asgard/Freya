@@ -66,10 +66,16 @@ export const DataMigration = () => {
     setExecute(false);
   }
 
-  const sourceItem = data.find(item => item.name === sourceDB);
-  const targetItem = data.find(item => item.name === targetDB);
-  const sourceImgSrc = sourceItem?.vendor === "PostgreSQL" ? "/images/elephant.png" : "/images/mysql-logo.png";
-  const targetImgSrc = targetItem?.vendor === "MySQL" ? "/images/mysql-logo.png" : "/images/elephant.png";
+  const sourceItem = data.find((item) => item.name === sourceDB);
+  const targetItem = data.find((item) => item.name === targetDB);
+  const sourceImgSrc =
+    sourceItem?.vendor === "PostgreSQL"
+      ? "/images/elephant.png"
+      : "/images/mysql-logo.png";
+  const targetImgSrc =
+    targetItem?.vendor === "MySQL"
+      ? "/images/mysql-logo.png"
+      : "/images/elephant.png";
 
   return (
     <div className="d-flex E">
@@ -114,13 +120,17 @@ export const DataMigration = () => {
                 <div className="db">
                   <img
                     className="imgs"
-                    src={sourceDB === "Select" ? "/images/default-db.png" : sourceImgSrc}
+                    src={
+                      sourceDB === "Select"
+                        ? "/images/default-db.png"
+                        : sourceImgSrc
+                    }
                     alt="Source Database Logo"
                   />
                   <p>
                     {sourceDB === "Select" ? "Source" : sourceDB}
                     <br />
-                    {sourceDB === "Select" ? "Database" : sourceItem?.vendor }
+                    {sourceDB === "Select" ? "Database" : sourceItem?.vendor}
                   </p>
                 </div>
                 <span className="arrow">
@@ -129,7 +139,11 @@ export const DataMigration = () => {
                 <div className="db">
                   <img
                     className="imgs"
-                    src={targetDB === "Select" ? "/images/default-db.png" : targetImgSrc}
+                    src={
+                      targetDB === "Select"
+                        ? "/images/default-db.png"
+                        : targetImgSrc
+                    }
                     alt="Target Database Logo"
                   />
                   <p>
