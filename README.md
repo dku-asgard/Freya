@@ -1,5 +1,10 @@
 # Freya
 
+# System Architecture
+![system_architecture](https://github.com/user-attachments/assets/26a5090b-9172-4859-bc87-fe1c7b72c76d)
+
+# UI Scenario
+![ui_scenario](https://github.com/user-attachments/assets/fccc8dba-4603-453f-8d30-71911016d368)
 
 # Freya Setup
 
